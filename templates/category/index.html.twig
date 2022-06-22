@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 
-{% block title %}Wild Series
+{% block title %}Category of Wild Series
 {% endblock %}
 
 
@@ -10,11 +10,9 @@
 	<h1>{{ website }}
 		index</h1>
 	<img src="{{ asset('build/images/photo_movie.jpeg') }}" alt="movie"/>
-	{% for program in programs %}
+	{% for category in categories %}
 		<div class="card">
-		<h2> {{ program.title }} </h2>
-		<p> {{ program.synopsis }} </p>
-		<p> {{ program.category.name }} </p>
+		<p> {{ category.name }} </p>
 		</div>
 
 	{% endfor %}

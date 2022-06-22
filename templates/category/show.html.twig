@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Category of Wild Series{% endblock %}
+
+{% block body %}
+
+	<h1>Category {{ category.name }}</h1>
+    	{% for program in programs %}
+		<div class="card">
+		<h2> {{ program.title }} </h2>
+		<p> {{ program.synopsis }} </p>
+		</div>
+
+	{% endfor %}
+
+{% endblock %}
